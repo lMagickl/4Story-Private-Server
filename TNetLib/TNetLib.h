@@ -20,16 +20,16 @@ using namespace std;
 #include <SQL.h>
 #include <SQLExt.h>
 
-#include <SqlDatabase.h>
-#include <SqlBase.h>
-#include <BindDesc.h>
-#include <SqlQuery.h>
-#include <SqlDirect.h>
+#include "SqlDatabase.h"
+#include "SqlBase.h""
+#include "BindDesc.h"
+#include "SqlQuery.h"
+#include "SqlDirect.h"
 
 // Network access header
-#include <Packet.h>
-#include <Session.h>
-#include <TNetDef.h>
-#include <ErrorCode.h>
+#include "Packet.h"
+#include "Session.h"
+#include "TNetDef.h"
+#include "ErrorCode.h"
 
 #endif // !defined __TNETLIB_H

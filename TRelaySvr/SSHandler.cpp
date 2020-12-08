@@ -494,7 +494,7 @@ DWORD CTRelaySvrModule::OnRW_RELAYSVR_ACK(LPPACKETBUF pBUF)
 	DWORD dwID;
 	CString strMsg;
 
-	for(i=0; i<wCount; i++)
+	for(DWORD i=0; i<wCount; i++)
 	{
 		pBUF->m_packet
 			>> dwID

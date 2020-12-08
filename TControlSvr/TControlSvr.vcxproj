@@ -51,6 +51,9 @@
     <IntDir>Debug\</IntDir>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Logiciels\Visual Studio 2019\VC\Tools\MSVC\14.27.29110\atlmfc\include;$(IncludePath)</IncludePath>
+    <ReferencePath>D:\Logiciels\Visual Studio 2019\VC\Tools\MSVC\14.27.29110\atlmfc\lib\x86;$(ReferencePath)</ReferencePath>
+    <LibraryPath>D:\Logiciels\Visual Studio 2019\VC\Tools\MSVC\14.27.29110\atlmfc\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>Release\</OutDir>

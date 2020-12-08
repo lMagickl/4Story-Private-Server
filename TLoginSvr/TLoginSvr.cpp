@@ -925,12 +925,15 @@ void CTLoginSvrModule::ProcessSession( CSqlDatabase *pDB, LPMAPTGROUP pGROUP, CT
 
 	while(bContinue)
 	{
-		DWORD dwResult = pUser->CheckMessage();
+		INT dwResult = pUser->CheckMessage();
 
 		switch(dwResult)
 		{
-		case PACKET_INCOMPLETE	: bContinue = FALSE; break;
-		case PACKET_COMPLETE	:
+		case PACKET_INCOMPLETE: 
+			bContinue = FALSE; 
+			break;
+
+		case PACKET_COMPLETE:
 			{
 				DWORD dwResult = OnReceive( pDB, pGROUP, pUser, pUser->m_Recv);
 
@@ -947,7 +950,10 @@ void CTLoginSvrModule::ProcessSession( CSqlDatabase *pDB, LPMAPTGROUP pGROUP, CT
 
 			break;
 
-		default					: OnInvalidSession(pUser); return;
+		default: 
+			OnInvalidSession(pUser); 
+			return;
+
 			// ***** IOCP 사용법 중 알아내기 힘든 세번째 구문 (비 정상적인 세션 종료) *****
 			//
 			// 클라이언트가 패킷을 변조해서 보낸다거나 네트웤 오류로 인해 세션이 비 정상적인 상태가 된 경우이며
